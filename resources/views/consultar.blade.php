@@ -24,7 +24,7 @@
                         <td>{{ $producto->stock }}</td>
                         <td>{{ $producto->origen }}</td>
                         <td>{{ $producto->proveedor }}</td>
-                        <td>
+                        <td class="d-flex align-items-center justify-content-center">
                             <!-- Botón para editar -->
                             <form action="{{ route('actualizar-producto', ['id' => $producto->id]) }}" method="get">
                                 <button class="btn btn-warning"><i class="fas fa-edit"></i></button>

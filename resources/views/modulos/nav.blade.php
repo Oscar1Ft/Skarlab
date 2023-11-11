@@ -9,12 +9,12 @@
                   Registro
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="index.php?action=registroU">Usuarios</a>
-                  <a class="dropdown-item" href="index.php?action=registroP">Productos</a>
+                  <a class="dropdown-item" href="index">Usuarios</a>
+                  <a class="dropdown-item" href="index">Productos</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ingreso">Ingreso</a>
+                <a class="nav-link" href="index">Ingreso</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="consultar">Consultar</a>

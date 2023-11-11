@@ -37,8 +37,39 @@ class ProductosController extends Controller
 
     }
 
-    public function index(){
+    public function consultar(){
         $productos=producto::all();
         return view('consultar',['arrayProductos'=>$productos]);
+    }
+
+    public function show($id){
+        $producto=producto::find($id);
+        return view('modulos.show',['producto'=>$producto]);
+    }
+
+    public function update(Request $request,$id){
+        $producto=producto::find($id);
+
+        $producto=new producto();
+
+        $producto->nombre = $request->nombre;
+        $producto->tipo = $request->tipo;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->stock = $request->stock;
+        $producto->origen = $request->origen;
+        $producto->proveedor = $request->proveedor;
+        $producto->certificacion = $request->certificacion;
+
+        $producto->save();
+
+        return redirect()->route('consulta')->with('success','Producto actualizado correctamente');
+
+    }
+
+    public function destroy($id){
+        $producto=producto::find($id);
+        $producto->delete();
+        return redirect()->route('consulta')->with('success','Profucto actualizado correctamente');
     }
 }

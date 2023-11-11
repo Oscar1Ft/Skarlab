@@ -1,4 +1,4 @@
 @extends('plantilla')
 @section('contenido')
-    @include('insertar')
+    @include('actualizar')
 @endsection

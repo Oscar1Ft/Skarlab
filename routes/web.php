@@ -15,15 +15,17 @@ use App\Http\Controllers\ProductosController;
 */
 
 Route::get('/', function () {
-    return view('user');
+    return view('welcome');
 });
 
-Route::get('/insert', function () {
+Route::get('/index', function () {
     return view('modulos.index');
 });
-Route::get('/consultar',[ProductosController::class,'index'])->name('consulta');
+Route::get('/consultar',[ProductosController::class,'consultar'])->name('consulta');
+Route::post('/consultar',[ProductosController::class,'store'])->name('insercion');
 
-Route::post('/insert',[ProductosController::class,'store'])->name('insercion');
-Route::patch('/insert',[ProductosController::class,'store'])->name('actualizar-producto');
-Route::delete('/insert',[ProductosController::class,'store'])->name('eliminar-producto');
+Route::get('/insert/{id}',[ProductosController::class,'show'])->name('consulta-uno');
+
+Route::patch('/insert/{id}',[ProductosController::class,'update'])->name('actualizar-producto');
+Route::delete('/insert/{id}',[ProductosController::class,'destroy'])->name('eliminar-producto');
 
