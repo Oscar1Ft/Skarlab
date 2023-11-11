@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/insert', function () {
     return view('modulos.index');
 });
+
+Route::post('/insert',[ProductosController::class,'store'])->name('insercion');
