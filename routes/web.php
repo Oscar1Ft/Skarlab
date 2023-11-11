@@ -21,5 +21,9 @@ Route::get('/', function () {
 Route::get('/insert', function () {
     return view('modulos.index');
 });
+Route::get('/consultar',[ProductosController::class,'index'])->name('consulta');
 
 Route::post('/insert',[ProductosController::class,'store'])->name('insercion');
+Route::patch('/insert',[ProductosController::class,'store'])->name('actualizar-producto');
+Route::delete('/insert',[ProductosController::class,'store'])->name('eliminar-producto');
+

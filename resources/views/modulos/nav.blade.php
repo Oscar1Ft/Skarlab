@@ -14,13 +14,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=ingreso">Ingreso</a>
+                <a class="nav-link" href="ingreso">Ingreso</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=consultar">Consultar</a>
+                <a class="nav-link" href="consultar">Consultar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=salir">Salir</a>
+                <a class="nav-link" href="salir">Salir</a>
             </li>
         </ul>
     </div>

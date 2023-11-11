@@ -36,4 +36,9 @@ class ProductosController extends Controller
         return redirect()->route('insercion')->with('success','Profucto registrado correctamente');
 
     }
+
+    public function index(){
+        $productos=producto::all();
+        return view('consultar',['arrayProductos'=>$productos]);
+    }
 }
