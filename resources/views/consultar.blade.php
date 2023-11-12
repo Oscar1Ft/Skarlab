@@ -11,6 +11,7 @@
                     <th>Stock</th>
                     <th>Origen</th>
                     <th>Proveedor</th>
+                    <th>certificacion</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -24,6 +25,7 @@
                         <td>{{ $producto->stock }}</td>
                         <td>{{ $producto->origen }}</td>
                         <td>{{ $producto->proveedor }}</td>
+                        <td>{{ $producto->certificacion }}</td>
                         <td class="d-flex align-items-center justify-content-center">
                             <!-- Botón para editar -->
                             <form action="{{ route('actualizar-producto', ['id' => $producto->id]) }}" method="get">

@@ -1,4 +1,4 @@
-<div class="container w-25 border p4 mt-4">
+<div class="container w-50 border p4 mt-4">
     <form action="{{ route('actualizar-producto', ['id' => $producto->id]) }}" method="post">
         @method('PATCH')
         @csrf

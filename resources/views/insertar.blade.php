@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container w-50 border p4 mt-4">
     <h2 class="text-center">Ingresar Producto</h2>
     <form action="{{route('insercion')}}" method="post" class="mx-auto" style="max-width: 400px;">
         @csrf
