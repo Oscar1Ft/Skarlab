@@ -5,22 +5,20 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav flex-column">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Registro
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="index">Usuarios</a>
-                  <a class="dropdown-item" href="index">Productos</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index">Ingreso</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="home">Registrar producto</a>
+                </li>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="consultar">Consultar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="salir">Salir</a>
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    {{ __('Salir') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </li>
         </ul>
     </div>

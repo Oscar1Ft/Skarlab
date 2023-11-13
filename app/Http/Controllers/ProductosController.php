@@ -7,6 +7,11 @@ use App\Models\Producto;
 
 class ProductosController extends Controller
 {
+    public function __construct()
+    {
+        // Agregar el middleware 'auth' para requerir autenticación
+        $this->middleware('auth');#->except(['consultar', 'show']);
+    }
     //
     public function store(Request $request){
         $request->validate([

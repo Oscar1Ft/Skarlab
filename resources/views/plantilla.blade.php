@@ -54,7 +54,7 @@
 
 <body>
     <header>
-        <img src="\logo.png" alt="Logo">
+    <img src="{{ asset('logo.png') }}" alt="Logo">
         <p style="color: white;">Nutriendo tu vida de manera orgánica</p>
     </header>
     @include('modulos.nav')

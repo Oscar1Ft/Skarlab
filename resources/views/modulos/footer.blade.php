@@ -18,8 +18,8 @@
         </div>
 
         <div class="col-lg-4">
-          <h5>Algo Extra</h5>
-          <p>Texto extra aquí...</p>
+          <h5>Extra</h5>
+          <p>Hola desde aquí 😁😒</p>
         </div>
       </div>
 
@@ -30,4 +30,4 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer>	

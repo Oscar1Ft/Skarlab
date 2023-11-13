@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +16,10 @@ use App\Http\Controllers\ProductosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::get('/index', function () {
-    return view('modulos.index');
-});
+
 Route::get('/consultar',[ProductosController::class,'consultar'])->name('consulta');
 Route::post('/consultar',[ProductosController::class,'store'])->name('insercion');
 
@@ -29,3 +28,6 @@ Route::get('/insert/{id}',[ProductosController::class,'show'])->name('consulta-u
 Route::patch('/insert/{id}',[ProductosController::class,'update'])->name('actualizar-producto');
 Route::delete('/insert/{id}',[ProductosController::class,'destroy'])->name('eliminar-producto');
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
